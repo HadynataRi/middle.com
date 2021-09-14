@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Middle_Page</title>
+    <link rel="stylesheet" href="Styles4.css" />
+  </head>
+  <body>
+    <section>
+      <div class="bannervid" id="slideshow">
+        <video
+          src="Vid n Jpg/280 _ Rodent.mp4"
+          autoplay
+          loop
+          muted
+          class="active"
+        ></video>
+        <video src="Vid n Jpg/videoplayback.mp4" autoplay loop muted></video
+        ><video
+          src="Vid n Jpg/you dare speak to me in that tone of voice_.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <video
+          src="Vid n Jpg/SQUISH THAT CAT_720P HD.mp4"
+          muted
+          loop
+          autoplay
+        ></video>
+        <video
+          src="Vid n Jpg/I m a leg man_720P HD.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          src="Vid N Jpg/097ff969-a2fd-47eb-b5a9-c2d36fcef20b.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          src="Vid N Jpg/6beee59b-52a7-4e97-bca6-78453eab75f4.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          src="Vid N Jpg/a616dd73-1c90-47ee-8543-ebf2f829f1ba.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <div class="container">
+        <header id="navbar">
+          <a href="#" class="logo">Hadian</a>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://www.instagram.com/kalyca_tiara/">About</a></li>
+            <li><a href="https://brianalbar.hadian@gmail.com">Contact</a></li>
+            <li><a href="#">Content</a></li>
+          </ul>
+
+          <span class="menuicon" onclick="togglemenu()"></span>
+        </header>
+
+        <div class="content">
+          <div class="bannertext" id="slideshowtext">
+            <div class="active">
+              <h2>Willkommen, Kalyca!</h2>
+              <p>
+                Hello there, You've got here soon enough, aren't u? So, this web
+                section is kinda full of videos [random exclusively]...<br />
+                <b>Enjoy!</b>
+              </p>
+            </div>
+
+            <div>
+              <h2>Russian man who sings in his car</h2>
+              <p>riff raff.. street ratt..<br /></p>
+            </div>
+
+            <div>
+              <h2>You dare..</h2>
+              <p>speak to me in that tone of voice..</p>
+            </div>
+
+            <div>
+              <h2>Squish The Cat</h2>
+              <p>"Squish it(?)"</p>
+            </div>
+
+            <div>
+              <h2>Kizu</h2>
+              <p>
+                阿良々木暦 , 忍野忍 , 忍野メメ {mangat yang sastra jepang}
+                <br />
+                [Click the 'Content' section on the top right of the screen]
+              </p>
+            </div>
+
+            <div>
+              <h2>Kizu</h2>
+              <p>
+                阿良々木暦 , 忍野忍 , 忍野メメ {mangat yang sastra jepang}
+                <br />
+                [Click the 'Content' section on the top right of the screen]
+              </p>
+            </div>
+
+            <div>
+              <h2>Kizu</h2>
+              <p>
+                阿良々木暦 , 忍野忍 , 忍野メメ {mangat yang sastra jepang}
+                <br />
+                [Click the 'Content' section on the top right of the screen]
+              </p>
+            </div>
+
+            <div>
+              <h2>Kizu</h2>
+              <p>
+                阿良々木暦 , 忍野忍 , 忍野メメ {mangat yang sastra jepang}
+                <br />
+                [Click the 'Content' section on the top right of the screen]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="sci">
+          <li>
+            <a href="#"
+              ><img src="https://i.ibb.co/x7P24fL/facebook.png" alt=""
+            /></a>
+            <a href="#"
+              ><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt=""
+            /></a>
+            <a href="https://www.instagram.com/kalyca_tiara/"
+              ><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt=""
+            /></a>
+          </li>
+        </ul>
+
+        <ul class="controls">
+          <li onclick="prevslide(); prevslidetext()">
+            <img src="Vid n Jpg/left.png" alt="" />
+          </li>
+          <li onclick="nextslide(); nextslidetext()">
+            <img src="Vid n Jpg/right.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--below are the javascript...-->
+
+    <script>
+      const slideShow = document.getElementById("slideshow");
+      const slides = slideShow.getElementsByTagName("video");
+      var index = 0;
+
+      function nextslide() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      function prevslide() {
+        slides[index].classList.remove("active");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      //below were the javascript for the text
+
+      const slideShowText = document.getElementById("slideshowtext");
+      const slidestext = slideShowText.getElementsByTagName("div");
+      var i = 0;
+
+      function nextslidetext() {
+        slidestext[i].classList.remove("active");
+        i = (i + 1) % slides.length;
+        slidestext[i].classList.add("active");
+      }
+
+      function prevslidetext() {
+        slidestext[i].classList.remove("active");
+        i = (i - 1 + slidestext.length) % slidestext.length;
+        slidestext[i].classList.add("active");
+      }
+
+      // below for the resposive menu
+
+      function togglemenu() {
+        const menuicon = document.querySelector(".menuicon");
+        const navbar = document.getElementById(".navbar");
+        menuicon.classList.toggle("active");
+        navbar.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
